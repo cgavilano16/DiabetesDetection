@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Potable Water Prediction</title>
+</head>
+<br>
+<br>
+    <h1>Potable Water Detection</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predictLog')}}"method="post">
+        <label for="aluminium">Aluminium: </label>
+        <input type="text" name="aluminium" required="required" placeholder="0 to 5.05"/>
+        <label for="ammonia">Ammonia: </label>
+        <input type="text" name="ammonia" required="required" placeholder="-0.08 to 29.84"/><br>
+        <label for="arsenic">Arsenic: </label>
+        <input type="text" name="arsenic" required="required" placeholder="0 to 1.05"/>
+        <label for="Barium">Barium: </label>
+        <input type="text" name="barium" required="required" placeholder="0 to 4.94"/><br>
+        <label for="cadmium">Cadmium: </label>
+        <input type="text" name="cadmium" required="required" placeholder="0 to 0.13"/>
+        <label for="hloramine">Chloramine: </label>
+        <input type="text" name="chloramine" required="required" placeholder="0 to 8.68"/><br>
+        <label for="Chromium">Chromium: </label>
+        <input type="text" name="chromium" required="required" placeholder="0 to 0.9"/>
+        <label for="copper">Copper: </label>
+        <input type="text" name="copper" required="required" placeholder="0 to 2.00"/><br>
+        <label for="flouride">Flouride: </label>
+        <input type="text" name="flouride" required="required" placeholder="0 to 1.5"/>
+        <label for="bacteria">Bacteria: </label>
+        <input type="text" name="bacteria" required="required" placeholder="0 to 1"/><br>
+        <label for="viruses">Viruses: </label>
+        <input type="text" name="viruses" required="required" placeholder="0 to 1"/>
+        <label for="lead">Lead: </label>
+        <input type="text" name="lead" required="required" placeholder="0 to 0.2"/><br>
+        <label for="nitrates">Nitrates: </label>
+        <input type="text" name="nitrates" required="required" placeholder="0 to 19.83"/>
+        <label for="nitrites">Nitrites: </label>
+        <input type="text" name="nitrites" required="required" placeholder="0 to 2.93"/><br>
+        <label for="mercury">Mercury: </label>
+        <input type="text" name="mercury" required="required" placeholder="0 to 0.01"/>
+        <label for="perchlorate">Perchlorate: </label>
+        <input type="text" name="perchlorate" required="required" placeholder="0 to 60.01"/><br>
+        <label for="radium">Radium: </label>
+        <input type="text" name="radium" required="required" placeholder="0 to 7.99"/>
+        <label for="selenium">Selenium: </label>
+        <input type="text" name="selenium" required="required" placeholder="0 to 0.1"/><br>
+        <label for="silver">Silver: </label>
+        <input type="text" name="silver" required="required" placeholder="0 to 0.5"/>
+        <label for="uranium">Uranim: </label>
+        <input type="text" name="uranium" required="required" placeholder="0 to 0.09"/><br>
+        <button type="submit">Predict Water Potability</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+  
+</html>
